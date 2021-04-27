@@ -13,9 +13,9 @@ alias mbashrc='vim ~/.bashrc'
 # Edit bash history.
 alias mhistory='vim ~/.bash_history'
 # Edit bash aliases.
-alias maliasesload='source ~/.oh-my-zsh/custom/aliases.zsh'
+alias maliasesload='source ~/.dotfiles/zsh/custom/aliases.zsh'
 # Edit zshrc.
-alias mzshrc='vim -S ~/.oh-my-zsh/custom/Session.vim'
+alias mzshrc='vim -S ~/.dotfiles/zsh/custom/Session.vim'
 # Edit vim configuration files.
 alias mvimrc='vim -S ~/.vim/vim.config/Session.vim'
 # Copy ISTU username to clipboard.
