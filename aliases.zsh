@@ -9,15 +9,15 @@ alias getp='function _ { copy_buffer=$(/home/farzat/files/Code/Projects/passCode
 # Switch from the current directory to the equivalent directory on another drive.
 alias sd='function _ { wd=$(pwd); wd="${wd/"${1}"/"${2}"}"; echo ${wd}; cd "${wd}"; }; _'
 # Edit bashrc.
-alias mbashrc='vim ~/.bashrc'
+alias mbashrc='$EDITOR ~/.bashrc'
 # Edit bash history.
-alias mhistory='vim ~/.bash_history'
+alias mhistory='$EDITOR ~/.bash_history'
 # Edit bash aliases.
 alias maliasesload='source ~/.dotfiles/zsh/custom/aliases.zsh'
 # Edit zshrc.
-alias mzshrc='vim -S ~/.dotfiles/zsh/custom/Session.vim'
-# Edit vim configuration files.
-alias mvimrc='vim -S ~/.vim/vim.config/Session.vim'
+alias mzshrc='$EDITOR -S ~/.dotfiles/zsh/custom/Session.vim'
+# Edit $EDITOR configuration files.
+alias mvimrc='$EDITOR -S ~/.dotfiles/vim/config/Session.vim'
 # Copy ISTU username to clipboard.
 alias copyechobuffer='echo -n $copy_buffer | copy; echo $copy_buffer'
 alias getsola='copy_buffer=solacom.intern@gmail.com; copyechobuffer'
@@ -36,8 +36,8 @@ alias getpudemy='getp Udemy 1 0 Farzat@outlook.com B2 ""'
 alias cdmedia='echo /media/farzat; cd /media/farzat/'
 alias cdfiles='echo ~/files; cd ~/files/'
 alias cdwork='cd /home/farzat/files/Code/Projects/Work/Sola.com'
-alias cdvim='vim `git ls-files`'
-alias cdnode='cd /home/farzat/files/Code/Practices/Node/react/http-ajax; vim `find ! -path "./node_modules/*" ! -path "./build/*" -type f`'
+alias cdvim='$EDITOR `git ls-files`'
+alias cdnode='cd /home/farzat/files/Code/Practices/Node/react/http-ajax; $EDITOR `find ! -path "./node_modules/*" ! -path "./build/*" -type f`'
 alias cdplayer='cd ~/files/Code/Projects/Media/media-player'
 alias cdserver='cd ~/files/Code/Projects/Media/media-server'
 # Create directories.
