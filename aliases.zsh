@@ -1,18 +1,18 @@
 # Creates the given directories and then moves to the first one.
-alias mkcd='function _ { mkdir -p "${@}"; cd "${1}"; }; _'
+alias mkcd='function { mkdir -p "${@}"; cd "${1}"; }'
 # Copy to clipboard.
 alias copy='xclip -sel clip'
 # Copy the current directory to the clipboard.
 alias pcopy='copy_buffer=$(pwd); copyechobuffer'
 # Uses the passCoder app and redirects the output to the clipboard.
-alias getp='function _ { copy_buffer=$(/home/farzat/files/Code/Projects/passCoder/passCoder.py "${@}"); echo -n $copy_buffer | copy; copy_buffer=""; }; _'
+alias getp='function { echo -n $(/home/farzat/files/Code/Projects/passCoder/passCoder.py "${@}") | copy; }'
 # Switch from the current directory to the equivalent directory on another drive.
-alias sd='function _ { wd=$(pwd); wd="${wd/"${1}"/"${2}"}"; echo ${wd}; cd "${wd}"; }; _'
-# Edit bashrc.
-alias mbashrc='$EDITOR ~/.bashrc'
+alias sd='function { local wd=$(pwd); wd="${wd/"${1}"/"${2}"}"; echo ${wd}; cd "${wd}"; }'
 # Edit bash history.
-alias mhistory='$EDITOR ~/.bash_history'
-# Edit bash aliases.
+alias mbashhistory='$EDITOR ~/.bash_history'
+# Edit zsh history.
+alias mhistory='$EDITOR ~/.zsh_history'
+# Edit zsh aliases.
 alias maliasesload='source ~/.dotfiles/zsh/custom/aliases.zsh'
 # Edit zshrc.
 alias mzshrc='$EDITOR -S ~/.dotfiles/zsh/custom/Session.vim'
@@ -41,13 +41,11 @@ alias cdnode='cd /home/farzat/files/Code/Practices/Node/react/http-ajax; $EDITOR
 alias cdplayer='cd ~/files/Code/Projects/Media/media-player'
 alias cdserver='cd ~/files/Code/Projects/Media/media-server'
 # Create directories.
-alias mkdirpython='function _ { mkdir -p "${@}"; for dir in "${@}"; do touch "${dir}/__init__.py"; done; }; _'
+alias mkdirpython='function { mkdir -p "${@}"; for dir in "${@}"; do touch "${dir}/__init__.py"; done; }'
 # Setting up servers.
 alias setupservermedia='http-server / -p 7700'
 # Suspend the machine.
 alias ssuspend='systemctl suspend'
-# Run authpass.
-alias authpass='~/files/Code/authpass/authpass'
 # Restore cursor to original colour and transparent behaviour before wal.
 alias restore_cursor="printf '%b' '\e]12'"
 # Find swap files.
