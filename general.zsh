@@ -23,5 +23,3 @@ export EDITOR="/usr/bin/nvim"
 # }
 
 export GOPATH="$HOME/.code_stuff/go"
-
-export PATH="${PATH}:${HOME}/.local/bin/"
