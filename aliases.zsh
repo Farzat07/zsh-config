@@ -1,13 +1,7 @@
-# Creates the given directories and then moves to the first one.
-alias mkcd='function { mkdir -p "${@}"; cd "${1}"; }'
 # Copy to clipboard.
 alias copy='xclip -sel clip'
 # Copy the current directory to the clipboard.
-alias pcopy='copy_buffer=$(pwd); copyechobuffer'
-# Uses the passCoder app and redirects the output to the clipboard.
-alias getp='function { echo -n $(/home/farzat/files/Code/Projects/passCoder/passCoder.py "${@}") | copy; }'
-# Switch from the current directory to the equivalent directory on another drive.
-alias sd='function { local wd=$(pwd); wd="${wd/"${1}"/"${2}"}"; echo ${wd}; cd "${wd}"; }'
+alias pcopy='copyechobuffer $(pwd)'
 # Edit bash history.
 alias mbashhistory='$EDITOR ~/.bash_history'
 # Edit zsh history.
@@ -18,9 +12,6 @@ alias maliasesload='source ~/.dotfiles/zsh/custom/aliases.zsh'
 alias mzshrc='$EDITOR -S ~/.dotfiles/zsh/custom/Session.vim'
 # Edit $EDITOR configuration files.
 alias mvimrc='$EDITOR -S ~/.dotfiles/vim/config/Session.vim'
-# Copy ISTU username to clipboard.
-alias copyechobuffer='echo -n $copy_buffer | copy; echo $copy_buffer'
-alias getsola='copy_buffer=solacom.intern@gmail.com; copyechobuffer'
 # Download using DownloadMedia projects.
 alias dyoutube='/home/farzat/files/Code/Projects/DownloadMedia/YouTube.sh'
 alias dudemy='/home/farzat/files/Code/Projects/DownloadMedia/Udemy.sh'
@@ -40,8 +31,6 @@ alias cdvim='$EDITOR `git ls-files`'
 alias cdnode='cd /home/farzat/files/Code/Practices/Node/react/http-ajax; $EDITOR `find ! -path "./node_modules/*" ! -path "./build/*" -type f`'
 alias cdplayer='cd ~/files/Code/Projects/Media/media-player'
 alias cdserver='cd ~/files/Code/Projects/Media/media-server'
-# Create directories.
-alias mkdirpython='function { mkdir -p "${@}"; for dir in "${@}"; do touch "${dir}/__init__.py"; done; }'
 # Setting up servers.
 alias setupservermedia='http-server / -p 7700'
 # Suspend the machine.
