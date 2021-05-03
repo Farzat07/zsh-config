@@ -23,3 +23,9 @@ export EDITOR="/usr/bin/nvim"
 # }
 
 export GOPATH="$HOME/.code_stuff/go"
+
+# Modify key behaviours, check `man xkeyboard-config` for details.
+setxkbmap -option ctrl:nocaps # Caps Lock as Ctrl.
+# setxkbmap -option ctrl:swapcaps # Swap Ctrl and Caps Lock.
+setxkbmap -option shift:both_capslock # Both Shift together enable Caps Lock.
+setxkbmap -option terminate:ctrl_alt_bksp # Key sequence to kill the X server: Ctrl+Alt+Backspace.
