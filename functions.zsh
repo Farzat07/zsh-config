@@ -14,7 +14,7 @@ mkdirpython() {
 
 # Uses the passCoder app and redirects the output to the clipboard.
 getp() {
-    echo -n $(/home/farzat/files/Code/Projects/passCoder/passCoder.py "${@}") | copy;
+    echo -n $(~/files/Code/Projects/passCoder/passCoder.py "${@}") | copy;
 }
 
 # Switch from the current directory to the equivalent directory on another drive.
