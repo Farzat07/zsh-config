@@ -73,6 +73,7 @@ ZSH_CUSTOM=$HOME/.dotfiles/zsh/custom
 plugins=(git)
 plugins+=(vi-mode)
 plugins+=(zsh-nvm)
+plugins+=(zsh-syntax-highlighting)
 
 # The custom configurations here are loaded before oh-my-zsh.sh is sourced
 ZSH_EARLY_CUSTOM=$ZSH_CUSTOM/early
