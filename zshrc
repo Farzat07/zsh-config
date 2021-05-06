@@ -71,8 +71,13 @@ ZSH_CUSTOM=$HOME/.dotfiles/zsh/custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+plugins+=(npm)
+plugins+=(pip)
+plugins+=(pipenv)
 plugins+=(vi-mode)
 plugins+=(zsh-nvm)
+plugins+=(zsh_reload)
+plugins+=(zsh-navigation-tools)
 plugins+=(zsh-syntax-highlighting)
 
 # The custom configurations here are loaded before oh-my-zsh.sh is sourced
