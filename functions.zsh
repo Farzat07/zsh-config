@@ -30,3 +30,12 @@ copyechobuffer() {
     echo -n $1 | copy;
     echo $1;
 }
+
+# Load aliases and functions.
+mloadaliasesfunctions() {
+    for file in ~/.dotfiles/zsh/custom/{functions.zsh,functions.private.zsh,aliases.zsh,aliases.private.zsh}
+    do
+        [ -f "$file" ] && source "$file"
+    done
+    return 0
+}
