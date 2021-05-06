@@ -6,6 +6,8 @@ alias pcopy='copyechobuffer $(pwd)'
 alias mbashhistory='$EDITOR ~/.bash_history'
 # Edit zsh history.
 alias mhistory='$EDITOR ~/.zsh_history'
+# Edit using $EDITOR.
+alias edit='$EDITOR'
 # Edit zshrc.
 alias mzshrc='$EDITOR -S ~/.dotfiles/zsh/custom/Session.vim'
 # Edit $EDITOR configuration files.
