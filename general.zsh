@@ -3,6 +3,15 @@ export PIPENV_VENV_IN_PROJECT=1
 export VISIUAL="/usr/bin/nvim"
 export EDITOR="/usr/bin/nvim"
 
+export GOPATH="$HOME/.local/share/go"
+export GOBIN="$HOME/.local/bin/go"
+
+# Modify key behaviours, check `man xkeyboard-config` for details.
+setxkbmap -option ctrl:nocaps # Caps Lock as Ctrl.
+# setxkbmap -option ctrl:swapcaps # Swap Ctrl and Caps Lock.
+setxkbmap -option shift:both_capslock # Both Shift together enable Caps Lock.
+setxkbmap -option terminate:ctrl_alt_bksp # Key sequence to kill the X server: Ctrl+Alt+Backspace.
+
 # Don't set the theme in tmux - it already inherits and the cursor colour there
 # can sometimes be a bit harder to restore.
 #[ -z "${TMUX}" ] && {
@@ -21,11 +30,3 @@ export EDITOR="/usr/bin/nvim"
     # The following command attempts to restore the cursor colour.
     printf '%b' '\e]12'
 # }
-
-export GOPATH="$HOME/.code_stuff/go"
-
-# Modify key behaviours, check `man xkeyboard-config` for details.
-setxkbmap -option ctrl:nocaps # Caps Lock as Ctrl.
-# setxkbmap -option ctrl:swapcaps # Swap Ctrl and Caps Lock.
-setxkbmap -option shift:both_capslock # Both Shift together enable Caps Lock.
-setxkbmap -option terminate:ctrl_alt_bksp # Key sequence to kill the X server: Ctrl+Alt+Backspace.
