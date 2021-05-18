@@ -1,11 +1,3 @@
-export MANPAGER='nvim +Man!'
-export PIPENV_VENV_IN_PROJECT=1
-export VISIUAL="/usr/bin/nvim"
-export EDITOR="/usr/bin/nvim"
-
-export GOPATH="$HOME/.local/share/go"
-export GOBIN="$HOME/.local/bin/go"
-
 # Modify key behaviours, check `man xkeyboard-config` for details.
 setxkbmap -option ctrl:nocaps # Caps Lock as Ctrl.
 # setxkbmap -option ctrl:swapcaps # Swap Ctrl and Caps Lock.
