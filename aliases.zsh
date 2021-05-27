@@ -39,6 +39,3 @@ alias ssuspend='systemctl suspend'
 alias restore_cursor="printf '%b' '\e]12'"
 # Find swap files.
 alias findswp='find / -type d \( -path /run/timeshift -o -path /media/farzat/Backup/timeshift \) -prune -false -o -name *.swp'
-# Set the background transparency in gnome-terminal.
-alias setTransperent='dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-transparent-background'
-alias setTransperency='dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/background-transparency-percent'
