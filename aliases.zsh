@@ -5,7 +5,7 @@ alias pcopy='copyechobuffer $(pwd)'
 # Edit bash history.
 alias mbashhistory='$EDITOR ~/.bash_history'
 # Edit zsh history.
-alias mhistory='$EDITOR ~/.zsh_history'
+alias mhistory='$EDITOR $ZDOTDIR/.zsh_history'
 # Edit using $EDITOR.
 alias edit='$EDITOR'
 # Edit zshrc.
