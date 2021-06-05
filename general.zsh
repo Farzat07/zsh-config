@@ -1,8 +1,10 @@
-# Modify key behaviours, check `man xkeyboard-config` for details.
-setxkbmap -option ctrl:nocaps # Caps Lock as Ctrl.
-# setxkbmap -option ctrl:swapcaps # Swap Ctrl and Caps Lock.
-setxkbmap -option shift:both_capslock # Both Shift together enable Caps Lock.
-setxkbmap -option terminate:ctrl_alt_bksp # Key sequence to kill the X server: Ctrl+Alt+Backspace.
+if [ "$REMOTEHOSTS" = "${REMOTEHOSTS%" $HOST "*}" ]; then
+    # Modify key behaviours, check `man xkeyboard-config` for details.
+    setxkbmap -option ctrl:nocaps # Caps Lock as Ctrl.
+    # setxkbmap -option ctrl:swapcaps # Swap Ctrl and Caps Lock.
+    setxkbmap -option shift:both_capslock # Both Shift together enable Caps Lock.
+    setxkbmap -option terminate:ctrl_alt_bksp # Key sequence to kill the X server: Ctrl+Alt+Backspace.
+fi
 
 # Don't set the theme in tmux - it already inherits and the cursor colour there
 # can sometimes be a bit harder to restore.
