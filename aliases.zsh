@@ -1,5 +1,5 @@
 # Copy to clipboard.
-alias copy='xclip -sel clip'
+alias cclip='xclip -sel clip'
 # Copy the current directory to the clipboard.
 alias pcopy='copyechobuffer $(pwd)'
 # Edit bash history.

@@ -14,7 +14,7 @@ mkdirpython() {
 
 # Uses the passCoder app and redirects the output to the clipboard.
 getp() {
-    echo -n $(~/files/Code/Projects/passCoder/passCoder.py "${@}") | copy;
+    echo -n $(~/files/Code/Projects/passCoder/passCoder.py "${@}") | xclip -sel clip;
 }
 
 # Switch from the current directory to the equivalent directory on another drive.
@@ -27,15 +27,6 @@ sd() {
 
 # Copy to the buffer then echo to stdout.
 copyechobuffer() {
-    echo -n $1 | copy;
+    echo -n $1 | xclip -sel clip;
     echo $1;
-}
-
-# Load aliases and functions.
-mloadaliasesfunctions() {
-    for file in ~/.dotfiles/zsh/custom/{functions.zsh,functions.private.zsh,aliases.zsh,aliases.private.zsh}
-    do
-        [ -f "$file" ] && source "$file"
-    done
-    return 0
 }
