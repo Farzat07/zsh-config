@@ -27,6 +27,6 @@ sd() {
 
 # Copy to the buffer then echo to stdout.
 copyechobuffer() {
-    echo -n $1 | xclip -sel clip;
-    echo $1;
+    echo -n $@ | xclip -sel clip;
+    echo $@;
 }

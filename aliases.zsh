@@ -1,7 +1,7 @@
 # Copy to clipboard.
 alias cclip='xclip -sel clip'
 # Copy the current directory to the clipboard.
-alias pcopy='copyechobuffer $(pwd)'
+alias pcopy='copyechobuffer "$(pwd)"'
 # Edit bash history.
 alias mbashhistory='$EDITOR ~/.bash_history'
 # Edit zsh history.
