@@ -1,18 +1,15 @@
-# Don't set the theme in tmux - it already inherits and the cursor colour there
-# can sometimes be a bit harder to restore.
-#[ -z "${TMUX}" ] && {
-    # Don't automatically run the sequence for all terminals as the cursor
-    # colour gets changed - instead skip for now and do it manually later on
-    # for the current terminal only.
-    wal --theme vscode -sq;
-    # Append a sequence which restores the cursor colour - doens't always work.
-    #printf '%s' ']12\' >> ~/.cache/wal/sequences;
+# Don't automatically run the sequence for all terminals as the cursor colour
+# gets changed - instead skip for now and do it manually later on for the
+# current terminal only (if local).
+wal --theme vscode -sq;
+# Only on a local terminal apply the colour sequences to the terminal. Even in
+# the case of remote sessions, it is the local terminal settings which are
+# visible anyways.
+if [ ! "$SESSION_TYPE" ] || [ -z "${SESSION_TYPE##local*}" ]; then
     # Run the sequences in the current terminal to apply the theme.
     # The first is synchronous, the second is asynchronous.
     cat ~/.cache/wal/sequences;
     # (cat ~/.cache/wal/sequences &);
     # To add support for TTYs this line can be optionally added.
     source ~/.cache/wal/colors-tty.sh
-    # The following command attempts to restore the cursor colour.
-    printf '%b' '\e]12'
-# }
+fi
