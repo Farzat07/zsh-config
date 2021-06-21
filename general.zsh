@@ -12,4 +12,7 @@ if [ ! "$SESSION_TYPE" ] || [ -z "${SESSION_TYPE##local*}" ]; then
     # (cat ~/.cache/wal/sequences &);
     # To add support for TTYs this line can be optionally added.
     source ~/.cache/wal/colors-tty.sh
+    # Attempts to restore the cursor colour - harmless, usually doesn't work
+    # but sometimes it is actually the only thing that works.
+    printf '%b' '\e]12'
 fi
