@@ -27,3 +27,10 @@ for config_file ($ZSH_CUSTOM/*.zsh(N)); do
   source $config_file
 done
 unset config_file
+
+# Load zsh completion.
+autoload -Uz compinit
+compinit
+
+# Run each compdef (for completion) previously paused by zinit.
+zinit cdreplay -q
