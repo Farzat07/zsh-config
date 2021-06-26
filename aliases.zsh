@@ -10,7 +10,7 @@ alias mhistory='$EDITOR $ZDOTDIR/.zsh_history'
 alias edit='$EDITOR'
 alias view='$EDITOR -M'
 # Edit zshrc.
-alias mzshrc='$EDITOR -S ~/.dotfiles/zsh/custom/Session.vim'
+alias mzshrc='$EDITOR -S ~/.dotfiles/zsh/Session.vim'
 # Edit $EDITOR configuration files.
 alias mvimrc='$EDITOR -S ~/.dotfiles/vim/config/Session.vim'
 # Download using DownloadMedia projects.
@@ -40,3 +40,5 @@ alias ssuspend='systemctl suspend'
 alias restore_cursor="printf '%b' '\e]12'"
 # Find swap files.
 alias findswp='find / -type d \( -path /run/timeshift -o -path /media/farzat/Backup/timeshift \) -prune -false -o -name *.swp'
+# General.
+alias la='ls -lAh --color=auto'
