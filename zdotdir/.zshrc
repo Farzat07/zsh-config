@@ -34,3 +34,6 @@ compinit
 
 # Run each compdef (for completion) previously paused by zinit.
 zinit cdreplay -q
+
+# Load powerlevel10k configurations.
+source "$ZSH_CUSTOM/manual/p10k.zsh"
