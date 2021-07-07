@@ -1,2 +1,4 @@
 HISTORY_IGNORE=". */.venv/bin/activate"
 HISTFILE="$ZDOTDIR/.zsh_history"
+HISTSIZE=50000
+SAVEHIST=10000
