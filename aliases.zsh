@@ -12,7 +12,7 @@ alias view='$EDITOR -M'
 # Edit zshrc.
 alias mzshrc='$EDITOR -S ~/.dotfiles/zsh/Session.vim'
 # Edit $EDITOR configuration files.
-alias mvimrc='$EDITOR -S ~/.dotfiles/vim/config/Session.vim'
+alias mvimrc='$EDITOR -S ~/.dotfiles/vim/Session.vim'
 # Download using DownloadMedia projects.
 alias dyoutube='~/files/Code/Projects/DownloadMedia/YouTube.sh'
 alias dudemy='~/files/Code/Projects/DownloadMedia/Udemy.sh'
