@@ -1,7 +1,7 @@
 # Don't automatically run the sequence for all terminals as the cursor colour
 # gets changed - instead skip for now and do it manually later on for the
 # current terminal only (if local).
-wal --theme vscode -sq;
+wal --theme vscode -sqa 1;
 # Only on a local terminal apply the colour sequences to the terminal. Even in
 # the case of remote sessions, it is the local terminal settings which are
 # visible anyways.
