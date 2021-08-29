@@ -7,6 +7,7 @@ alias mbashhistory='$EDITOR ~/.bash_history'
 # Edit zsh history.
 alias mhistory='$EDITOR $ZDOTDIR/.zsh_history'
 # Edit and view using $EDITOR.
+alias v='$EDITOR'
 alias edit='$EDITOR'
 alias view='$EDITOR -M'
 # Edit zshrc.
