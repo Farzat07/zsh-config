@@ -30,3 +30,7 @@ copyechobuffer() {
     echo -n $@ | xclip -sel clip;
     echo $@;
 }
+
+vinfo() {
+    INFOPATH="$XDG_DATA_HOME/info:$INFOPATH" $EDITOR -R -M -c "Info $@" +only
+}

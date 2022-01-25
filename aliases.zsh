@@ -14,6 +14,8 @@ alias view='$EDITOR -M'
 alias mzshrc='$EDITOR -S ~/.dotfiles/zsh/Session.vim'
 # Edit $EDITOR configuration files.
 alias mvimrc='$EDITOR -S ~/.dotfiles/vim/Session.vim'
+# Edit the ledger file.
+alias mledger='$EDITOR -S $XDG_DATA_HOME/ledger/Session.vim'
 # Download using DownloadMedia projects.
 alias dyoutube='~/files/Code/Projects/DownloadMedia/YouTube.sh'
 alias dudemy='~/files/Code/Projects/DownloadMedia/Udemy.sh'

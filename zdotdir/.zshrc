@@ -35,5 +35,8 @@ compinit
 # Run each compdef (for completion) previously paused by zinit.
 zinit cdreplay -q
 
+# Add some generic completion functions.
+compdef _gnu_generic file pamixer
+
 # Load powerlevel10k configurations.
 source "$ZSH_CUSTOM/manual/p10k.zsh"
