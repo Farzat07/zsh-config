@@ -28,16 +28,16 @@ pcopy() {
 }
 
 vinfo() {
-    INFOPATH="$XDG_DATA_HOME/info:$INFOPATH" $EDITOR -R -M -c "Info $@" +only
+    INFOPATH="$XDG_DATA_HOME/info:$INFOPATH" ${EDITOR:-nvim} -R -M -c "Info $@" +only
 }
 
 vn3() {
     if [ "$#" -gt 0 ]; then
         local direc="$(printf %q "$1")"
         shift
-        $EDITOR -c "NnnExplorer $direc" "$@"
+        ${EDITOR:-nvim} -c "NnnExplorer $direc" "$@"
     else
-        $EDITOR -c NnnExplorer
+        ${EDITOR:-nvim} -c NnnExplorer
     fi
 }
 
