@@ -1,5 +1,5 @@
 typeset -A ZI
-ZI[HOME_DIR]="${FFILES:-${XDG_CACHE_DIR:-$HOME/.cache}}/zi"
+ZI[HOME_DIR]="${XDG_STATE_HOME:-$HOME/.local/state}/zi"
 source "$ZDOTDIR/zi.init.zsh" && zzinit
 
 # Load all of your early custom configurations.
