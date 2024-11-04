@@ -6,7 +6,7 @@ source "$ZDOTDIR/zi.init.zsh" && zzinit
 function {
 local config_file
 for config_file ("$ZDOTDIR"/early/*.zsh(N)); do
-    source "$config_file"
+	source "$config_file"
 done
 }
 
@@ -27,7 +27,7 @@ zi snippet "$ZDOTDIR/resources/completion/_man"
 function {
 local config_file
 for config_file ("$ZDOTDIR"/halfway/*.zsh(N)); do
-    source "$config_file"
+	source "$config_file"
 done
 }
 
