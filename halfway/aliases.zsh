@@ -22,3 +22,8 @@ alias ssuspend='systemctl suspend'
 alias restore_cursor="printf '%b' '\e]12'"
 # General.
 alias la='ls -lAh --color=auto'
+# Pacman categorize packages.
+alias pacman-orphan='pacman -Qtdq'
+alias pacman-explicit-native='pacman -Qneq'
+alias pacman-explicit='pacman -Qeq'
+alias pacman-optional='comm -3 <(pacman -Qttq | sort) <(pacman -Qtteq | sort)'
